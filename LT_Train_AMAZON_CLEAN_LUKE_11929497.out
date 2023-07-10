@@ -1,0 +1,985 @@
+args: Namespace(act_func='tanh', anneal_cap=0.005, anneal_steps=500, batch_size=200, cuda=True, data_path='./datasets/', dataset='amazon-book_clean', emb_path='../datasets/', emb_size=10, epochs=1000, gpu='1', in_dims='[300]', lamda=0.03, log_name='log', lr1=0.0005, lr2=0.0001, mean_type='x0', mlp_act_func='tanh', mlp_dims='[300]', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', norm=False, num_workers=0, optimizer1='AdamW', optimizer2='AdamW', out_dims='[]', reparam=True, reweight=True, round=1, sampling_noise=False, sampling_steps=0, save_path='./saved_models/', steps=5, time_type='cat', topN='[10, 20, 50, 100]', tst_w_val=False, vae_anneal_cap=0.3, vae_anneal_steps=200, w_max=1.0, w_min=0.5, wd1=0.0, wd2=0)
+args: Namespace(act_func='tanh', anneal_cap=0.005, anneal_steps=500, batch_size=200, cuda=True, data_path='./datasets/', dataset='amazon-book_clean', emb_path='../datasets/', emb_size=10, epochs=1000, gpu='1', in_dims='[300]', lamda=0.03, log_name='log', lr1=0.0005, lr2=0.0001, mean_type='x0', mlp_act_func='tanh', mlp_dims='[300]', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', norm=False, num_workers=0, optimizer1='AdamW', optimizer2='AdamW', out_dims='[]', reparam=True, reweight=True, round=1, sampling_noise=False, sampling_steps=0, save_path='./saved_models/', steps=5, time_type='cat', topN='[10, 20, 50, 100]', tst_w_val=False, vae_anneal_cap=0.3, vae_anneal_steps=200, w_max=1.0, w_min=0.5, wd1=0.0, wd2=0)
+Starting time:  2023-06-15 16:27:20
+user num: 108822
+item num: 94949
+data ready.
+emb_path: ./datasets/amazon-book_clean/item_emb.npy
+running k-means on cuda:0..
+[running kmeans]: 0it [00:00, ?it/s][running kmeans]: 0it [00:00, ?it/s, center_shift=0.066783, iteration=1, tol=0.000100][running kmeans]: 1it [00:00,  7.33it/s, center_shift=0.002020, iteration=2, tol=0.000100][running kmeans]: 2it [00:00, 14.66it/s, center_shift=0.002020, iteration=2, tol=0.000100][running kmeans]: 2it [00:00, 14.66it/s, center_shift=0.000370, iteration=3, tol=0.000100][running kmeans]: 3it [00:00, 14.66it/s, center_shift=0.000044, iteration=4, tol=0.000100][running kmeans]: 4it [00:00, 19.51it/s, center_shift=0.000044, iteration=4, tol=0.000100]
+category length:  [9495, 85454]
+Latent dims of each category:  [[30], [270]]
+Number of parameters: 75478819
+models ready.
+Preparing mask for validation & test costs 00: 00: 01
+Start training...
+Runing Epoch 001 train loss 127704.7820 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 002 train loss 112496.6670 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 003 train loss 106943.6999 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 004 train loss 103407.9913 costs 00: 00: 34
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0047
+0.0041
+0.0033
+0.0027 
+Recall:
+ 0.0118
+0.0207
+0.0402
+0.0638 
+NDCG:
+ 0.0086
+0.0115
+0.017
+0.0227 
+MRR:
+ 0.0138
+0.0157
+0.0175
+0.0183
+[Test]:  
+Precision:
+ 0.0044
+0.0038
+0.0029
+0.0023 
+Recall:
+ 0.0173
+0.0291
+0.0547
+0.0854 
+NDCG:
+ 0.0108
+0.0144
+0.0208
+0.0273 
+MRR:
+0.0136
+0.0154
+0.017
+0.0178
+Runing Epoch 005 train loss 101114.4852 costs 00: 02: 01
+------------------------------------------------------
+Runing Epoch 006 train loss 99320.5294 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 007 train loss 97895.1759 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 008 train loss 96755.1772 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 009 train loss 95847.3604 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0066
+0.0057
+0.0044
+0.0036 
+Recall:
+ 0.0188
+0.0314
+0.0584
+0.0906 
+NDCG:
+ 0.0133
+0.0175
+0.0251
+0.0327 
+MRR:
+ 0.0201
+0.0225
+0.0248
+0.0258
+[Test]:  
+Precision:
+ 0.0068
+0.0057
+0.0042
+0.0033 
+Recall:
+ 0.0304
+0.0488
+0.0865
+0.13 
+NDCG:
+ 0.0189
+0.0245
+0.0338
+0.0428 
+MRR:
+0.022
+0.0244
+0.0266
+0.0276
+Runing Epoch 010 train loss 95111.5025 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 011 train loss 94453.5018 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 012 train loss 93914.6903 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 013 train loss 93321.9398 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 014 train loss 92856.5258 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.008
+0.0068
+0.0052
+0.0041 
+Recall:
+ 0.0234
+0.0385
+0.0703
+0.1074 
+NDCG:
+ 0.0167
+0.0217
+0.0306
+0.0393 
+MRR:
+ 0.0248
+0.0276
+0.0301
+0.0312
+[Test]:  
+Precision:
+ 0.0087
+0.0071
+0.0052
+0.0039 
+Recall:
+ 0.0398
+0.0619
+0.107
+0.1567 
+NDCG:
+ 0.0254
+0.0321
+0.0433
+0.0535 
+MRR:
+0.0293
+0.0321
+0.0346
+0.0357
+Runing Epoch 015 train loss 92395.1239 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 016 train loss 92009.2231 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 017 train loss 91664.2669 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 018 train loss 91260.1835 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 019 train loss 90862.8197 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0088
+0.0074
+0.0056
+0.0044 
+Recall:
+ 0.0267
+0.0436
+0.0775
+0.1178 
+NDCG:
+ 0.0187
+0.0243
+0.0338
+0.0433 
+MRR:
+ 0.0272
+0.0302
+0.0329
+0.0341
+[Test]:  
+Precision:
+ 0.0098
+0.0079
+0.0057
+0.0043 
+Recall:
+ 0.0458
+0.0707
+0.1206
+0.1739 
+NDCG:
+ 0.0294
+0.037
+0.0493
+0.0603 
+MRR:
+0.0336
+0.0367
+0.0393
+0.0405
+Runing Epoch 020 train loss 90608.6172 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 021 train loss 90191.0653 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 022 train loss 89942.9966 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 023 train loss 89546.3015 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 024 train loss 89281.8275 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0096
+0.008
+0.006
+0.0047 
+Recall:
+ 0.0296
+0.0476
+0.0841
+0.1271 
+NDCG:
+ 0.0206
+0.0266
+0.0368
+0.0468 
+MRR:
+ 0.0295
+0.0327
+0.0355
+0.0367
+[Test]:  
+Precision:
+ 0.011
+0.0087
+0.0062
+0.0046 
+Recall:
+ 0.0522
+0.0795
+0.1327
+0.1902 
+NDCG:
+ 0.0331
+0.0415
+0.0545
+0.0664 
+MRR:
+0.0372
+0.0405
+0.0433
+0.0445
+Runing Epoch 025 train loss 89052.5303 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 026 train loss 88677.7313 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 027 train loss 88373.5174 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 028 train loss 88247.5565 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 029 train loss 87905.9450 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0102
+0.0085
+0.0063
+0.0049 
+Recall:
+ 0.0318
+0.0508
+0.0895
+0.1337 
+NDCG:
+ 0.0221
+0.0285
+0.0392
+0.0496 
+MRR:
+ 0.0311
+0.0345
+0.0374
+0.0387
+[Test]:  
+Precision:
+ 0.0118
+0.0093
+0.0065
+0.0048 
+Recall:
+ 0.0574
+0.0859
+0.1416
+0.2004 
+NDCG:
+ 0.0366
+0.0453
+0.0591
+0.0712 
+MRR:
+0.0408
+0.0443
+0.0472
+0.0485
+Runing Epoch 030 train loss 87674.7121 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 031 train loss 87414.1181 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 032 train loss 87133.5326 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 033 train loss 86943.0244 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 034 train loss 86865.6965 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0105
+0.0087
+0.0065
+0.005 
+Recall:
+ 0.0335
+0.053
+0.0929
+0.1384 
+NDCG:
+ 0.0231
+0.0296
+0.0408
+0.0513 
+MRR:
+ 0.0325
+0.036
+0.0389
+0.0402
+[Test]:  
+Precision:
+ 0.0124
+0.0097
+0.0067
+0.005 
+Recall:
+ 0.0609
+0.0906
+0.1475
+0.208 
+NDCG:
+ 0.0388
+0.0478
+0.0618
+0.0742 
+MRR:
+0.0429
+0.0465
+0.0495
+0.0507
+Runing Epoch 035 train loss 86552.9476 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 036 train loss 86344.1467 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 037 train loss 86078.1901 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 038 train loss 85851.0710 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 039 train loss 85674.9353 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.011
+0.0091
+0.0067
+0.0052 
+Recall:
+ 0.0351
+0.0558
+0.0967
+0.1432 
+NDCG:
+ 0.0243
+0.0313
+0.0426
+0.0535 
+MRR:
+ 0.0342
+0.0377
+0.0407
+0.0421
+[Test]:  
+Precision:
+ 0.013
+0.0102
+0.007
+0.0052 
+Recall:
+ 0.0639
+0.0954
+0.1543
+0.2161 
+NDCG:
+ 0.0412
+0.0508
+0.0652
+0.0779 
+MRR:
+0.0457
+0.0495
+0.0525
+0.0538
+Runing Epoch 040 train loss 85529.2104 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 041 train loss 85332.1098 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 042 train loss 85145.1145 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 043 train loss 85026.9864 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 044 train loss 84775.5002 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0113
+0.0094
+0.0069
+0.0053 
+Recall:
+ 0.0362
+0.0578
+0.099
+0.1461 
+NDCG:
+ 0.0252
+0.0324
+0.0439
+0.0548 
+MRR:
+ 0.0355
+0.0392
+0.0422
+0.0435
+[Test]:  
+Precision:
+ 0.0137
+0.0106
+0.0072
+0.0053 
+Recall:
+ 0.0673
+0.0986
+0.159
+0.2215 
+NDCG:
+ 0.0434
+0.0529
+0.0678
+0.0806 
+MRR:
+0.0484
+0.0521
+0.0552
+0.0565
+Runing Epoch 045 train loss 84542.8995 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 046 train loss 84450.1333 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 047 train loss 84272.1873 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 048 train loss 84153.8960 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 049 train loss 83912.4014 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0115
+0.0094
+0.0069
+0.0053 
+Recall:
+ 0.0369
+0.0582
+0.1003
+0.1475 
+NDCG:
+ 0.0255
+0.0326
+0.0444
+0.0554 
+MRR:
+ 0.0358
+0.0394
+0.0425
+0.0438
+[Test]:  
+Precision:
+ 0.0139
+0.0107
+0.0073
+0.0053 
+Recall:
+ 0.069
+0.1004
+0.1611
+0.2236 
+NDCG:
+ 0.0445
+0.054
+0.0689
+0.0817 
+MRR:
+0.0491
+0.0528
+0.0559
+0.0572
+Runing Epoch 050 train loss 83748.7441 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 051 train loss 83678.6934 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 052 train loss 83459.0186 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 053 train loss 83359.2822 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 054 train loss 83184.4438 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0117
+0.0096
+0.007
+0.0054 
+Recall:
+ 0.0379
+0.0596
+0.102
+0.1492 
+NDCG:
+ 0.0262
+0.0334
+0.0452
+0.0562 
+MRR:
+ 0.0365
+0.0403
+0.0433
+0.0447
+[Test]:  
+Precision:
+ 0.0143
+0.0109
+0.0074
+0.0054 
+Recall:
+ 0.0708
+0.1026
+0.1641
+0.2277 
+NDCG:
+ 0.0456
+0.0553
+0.0704
+0.0834 
+MRR:
+0.0505
+0.0543
+0.0574
+0.0588
+Runing Epoch 055 train loss 83048.7912 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 056 train loss 82930.0600 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 057 train loss 82747.8421 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 058 train loss 82703.8031 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 059 train loss 82560.6523 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0119
+0.0097
+0.0071
+0.0054 
+Recall:
+ 0.0384
+0.0599
+0.1027
+0.1499 
+NDCG:
+ 0.0265
+0.0337
+0.0456
+0.0567 
+MRR:
+ 0.0371
+0.0408
+0.044
+0.0453
+[Test]:  
+Precision:
+ 0.0145
+0.0111
+0.0075
+0.0054 
+Recall:
+ 0.0719
+0.1046
+0.1665
+0.2298 
+NDCG:
+ 0.0465
+0.0564
+0.0716
+0.0846 
+MRR:
+0.0514
+0.0553
+0.0584
+0.0597
+Runing Epoch 060 train loss 82372.7814 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 061 train loss 82314.8005 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 062 train loss 82254.0244 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 063 train loss 82108.2397 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 064 train loss 82007.2964 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0119
+0.0097
+0.0071
+0.0055 
+Recall:
+ 0.0384
+0.0602
+0.1034
+0.1513 
+NDCG:
+ 0.0266
+0.0339
+0.0459
+0.057 
+MRR:
+ 0.0371
+0.0408
+0.044
+0.0453
+[Test]:  
+Precision:
+ 0.0145
+0.0111
+0.0075
+0.0055 
+Recall:
+ 0.0724
+0.1054
+0.1672
+0.2306 
+NDCG:
+ 0.0466
+0.0566
+0.0718
+0.0848 
+MRR:
+0.0511
+0.0551
+0.0582
+0.0595
+Runing Epoch 065 train loss 81791.9386 costs 00: 02: 03
+------------------------------------------------------
+Runing Epoch 066 train loss 81767.2245 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 067 train loss 81625.3245 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 068 train loss 81592.1532 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 069 train loss 81392.4235 costs 00: 00: 34
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0119
+0.0098
+0.0072
+0.0055 
+Recall:
+ 0.0387
+0.061
+0.1046
+0.152 
+NDCG:
+ 0.0269
+0.0343
+0.0465
+0.0575 
+MRR:
+ 0.0375
+0.0413
+0.0445
+0.0458
+[Test]:  
+Precision:
+ 0.0147
+0.0112
+0.0076
+0.0055 
+Recall:
+ 0.0738
+0.1069
+0.1686
+0.2327 
+NDCG:
+ 0.0476
+0.0576
+0.0728
+0.086 
+MRR:
+0.0523
+0.0562
+0.0594
+0.0607
+Runing Epoch 070 train loss 81308.3252 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 071 train loss 81224.6481 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 072 train loss 81076.0764 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 073 train loss 80992.2787 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 074 train loss 80954.1486 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0118
+0.0098
+0.0071
+0.0054 
+Recall:
+ 0.0383
+0.0608
+0.1035
+0.1507 
+NDCG:
+ 0.0266
+0.0341
+0.046
+0.057 
+MRR:
+ 0.0372
+0.041
+0.0441
+0.0455
+[Test]:  
+Precision:
+ 0.0146
+0.0112
+0.0075
+0.0055 
+Recall:
+ 0.0733
+0.1063
+0.1682
+0.2308 
+NDCG:
+ 0.0472
+0.0572
+0.0725
+0.0854 
+MRR:
+0.0519
+0.0558
+0.059
+0.0603
+Runing Epoch 075 train loss 80871.4727 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 076 train loss 80751.3341 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 077 train loss 80906.9109 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 078 train loss 80618.8245 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 079 train loss 80512.2830 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.0118
+0.0098
+0.0071
+0.0054 
+Recall:
+ 0.0383
+0.0607
+0.1037
+0.151 
+NDCG:
+ 0.0266
+0.0341
+0.046
+0.057 
+MRR:
+ 0.0371
+0.0409
+0.044
+0.0454
+[Test]:  
+Precision:
+ 0.0146
+0.0112
+0.0075
+0.0054 
+Recall:
+ 0.0735
+0.1071
+0.1684
+0.2314 
+NDCG:
+ 0.0474
+0.0576
+0.0727
+0.0857 
+MRR:
+0.0523
+0.0563
+0.0594
+0.0607
+Runing Epoch 080 train loss 80391.0446 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 081 train loss 80398.3512 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 082 train loss 80367.0220 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 083 train loss 80205.1875 costs 00: 00: 35
+------------------------------------------------------
+Runing Epoch 084 train loss 80108.6672 costs 00: 00: 35
+------------------------------------------------------
+[Valid]: 
+Precision:
+ 0.012
+0.0098
+0.0072
+0.0055 
+Recall:
+ 0.039
+0.0607
+0.1046
+0.1515 
+NDCG:
+ 0.0269
+0.0342
+0.0464
+0.0574 
+MRR:
+ 0.0375
+0.0413
+0.0445
+0.0458
+[Test]:  
+Precision:
+ 0.0148
+0.0113
+0.0076
+0.0055 
+Recall:
+ 0.0743
+0.1076
+0.1688
+0.2323 
+NDCG:
+ 0.0478
+0.0578
+0.0729
+0.086 
+MRR:
+0.0525
+0.0564
+0.0596
+0.0609
+Runing Epoch 085 train loss 80024.5527 costs 00: 02: 02
+------------------------------------------------------
+Runing Epoch 086 train loss 79998.4465 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 087 train loss 79941.5406 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 088 train loss 79921.8278 costs 00: 00: 34
+------------------------------------------------------
+Runing Epoch 089 train loss 79749.0629 costs 00: 00: 34
+------------------------------------------------------
+------------------
+Exiting from training early
+======================================================
+End. Best Epoch 070 
+[Valid]: 
+Precision:
+ 0.0119
+0.0098
+0.0072
+0.0055 
+Recall:
+ 0.0387
+0.061
+0.1046
+0.152 
+NDCG:
+ 0.0269
+0.0343
+0.0465
+0.0575 
+MRR:
+ 0.0375
+0.0413
+0.0445
+0.0458
+[Test]:  
+Precision:
+ 0.0147
+0.0112
+0.0076
+0.0055 
+Recall:
+ 0.0738
+0.1069
+0.1686
+0.2327 
+NDCG:
+ 0.0476
+0.0576
+0.0728
+0.086 
+MRR:
+0.0523
+0.0562
+0.0594
+0.0607
+End time:  2023-06-15 17:44:53
+args: Namespace(act_func='tanh', anneal_cap=0.005, anneal_steps=500, batch_size=200, cuda=True, data_path='./datasets/', dataset='amazon-book_noisy', emb_path='../datasets/', emb_size=10, epochs=1000, gpu='1', in_dims='[300]', lamda=0.03, log_name='log', lr1=0.0005, lr2=0.0001, mean_type='x0', mlp_act_func='tanh', mlp_dims='[300]', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', norm=False, num_workers=0, optimizer1='AdamW', optimizer2='AdamW', out_dims='[]', reparam=True, reweight=True, round=1, sampling_noise=False, sampling_steps=0, save_path='./saved_models/', steps=5, time_type='cat', topN='[10, 20, 50, 100]', tst_w_val=False, vae_anneal_cap=0.3, vae_anneal_steps=200, w_max=1.0, w_min=0.5, wd1=0.0, wd2=0)
+args: Namespace(act_func='tanh', anneal_cap=0.005, anneal_steps=500, batch_size=200, cuda=True, data_path='./datasets/', dataset='amazon-book_noisy', emb_path='../datasets/', emb_size=10, epochs=1000, gpu='1', in_dims='[300]', lamda=0.03, log_name='log', lr1=0.0005, lr2=0.0001, mean_type='x0', mlp_act_func='tanh', mlp_dims='[300]', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', norm=False, num_workers=0, optimizer1='AdamW', optimizer2='AdamW', out_dims='[]', reparam=True, reweight=True, round=1, sampling_noise=False, sampling_steps=10, save_path='./saved_models/', steps=5, time_type='cat', topN='[10, 20, 50, 100]', tst_w_val=False, vae_anneal_cap=0.3, vae_anneal_steps=200, w_max=1.0, w_min=0.5, wd1=0.0, wd2=0)
+Starting time:  2023-06-15 17:44:56
+user num: 108822
+item num: 178181
+data ready.
+emb_path: ./datasets/amazon-book_noisy/item_emb.npy
+running k-means on cuda:0..
+[running kmeans]: 0it [00:00, ?it/s][running kmeans]: 0it [00:00, ?it/s, center_shift=0.363102, iteration=1, tol=0.000100][running kmeans]: 1it [00:00,  9.73it/s, center_shift=0.363102, iteration=1, tol=0.000100][running kmeans]: 1it [00:00,  9.73it/s, center_shift=0.020991, iteration=2, tol=0.000100][running kmeans]: 2it [00:00,  9.73it/s, center_shift=0.007879, iteration=3, tol=0.000100][running kmeans]: 3it [00:00, 10.54it/s, center_shift=0.007879, iteration=3, tol=0.000100][running kmeans]: 3it [00:00, 10.54it/s, center_shift=0.003548, iteration=4, tol=0.000100][running kmeans]: 4it [00:00, 10.54it/s, center_shift=0.001787, iteration=5, tol=0.000100][running kmeans]: 5it [00:00, 10.73it/s, center_shift=0.001787, iteration=5, tol=0.000100][running kmeans]: 5it [00:00, 10.73it/s, center_shift=0.000846, iteration=6, tol=0.000100][running kmeans]: 6it [00:00, 10.73it/s, center_shift=0.000491, iteration=7, tol=0.000100][running kmeans]: 7it [00:00, 10.79it/s, center_shift=0.000491, iteration=7, tol=0.000100][running kmeans]: 7it [00:00, 10.79it/s, center_shift=0.000263, iteration=8, tol=0.000100][running kmeans]: 8it [00:00, 10.79it/s, center_shift=0.000190, iteration=9, tol=0.000100][running kmeans]: 9it [00:00, 10.83it/s, center_shift=0.000190, iteration=9, tol=0.000100][running kmeans]: 9it [00:00, 10.83it/s, center_shift=0.000114, iteration=10, tol=0.000100][running kmeans]: 10it [00:01, 10.83it/s, center_shift=0.000072, iteration=11, tol=0.000100][running kmeans]: 11it [00:01, 10.85it/s, center_shift=0.000072, iteration=11, tol=0.000100][running kmeans]: 11it [00:01, 10.77it/s, center_shift=0.000072, iteration=11, tol=0.000100]
+category length:  [2804, 175377]
+Latent dims of each category:  [[4], [296]]
+Number of parameters: 157662407
+models ready.
+Preparing mask for validation & test costs 00: 00: 01
+Start training...
+Runing Epoch 001 train loss 130588.4655 costs 00: 00: 54
+------------------------------------------------------
+Runing Epoch 002 train loss 114925.0956 costs 00: 00: 54
+------------------------------------------------------
+Runing Epoch 003 train loss 109310.3128 costs 00: 00: 54
+------------------------------------------------------
+Runing Epoch 004 train loss 105831.3213 costs 00: 00: 55
+------------------------------------------------------
+Traceback (most recent call last):
+  File "./LT-DiffRec/main.py", line 423, in <module>
+    valid_results = evaluate(test_loader, valid_y_data, mask_train, eval(args.topN))
+  File "./LT-DiffRec/main.py", line 293, in evaluate
+    batch_latent_recon = diffusion.p_sample(
+  File "/home/lcur2470/RS/LT-DiffRec/models/gaussian_diffusion.py", line 126, in p_sample
+    assert (
+AssertionError: Too much steps in inference. steps is 10, but GaussianDiffusion.steps is 5

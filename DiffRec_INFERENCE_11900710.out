@@ -1,0 +1,258 @@
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_clean/', dataset='amazon-book_clean', gpu='1', log_name='log', mean_type='x0', noise_max=0.005, noise_min=0.0005, noise_scale=0.0001, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:50:23
+user num: 108822
+item num: 94949
+data ready.
+models ready.
+[Valid]: 
+Precision:
+ 0.012
+0.0097
+0.0069
+0.0051 
+Recall:
+ 0.0375
+0.0579
+0.0949
+0.1327 
+NDCG:
+ 0.0261
+0.0328
+0.0433
+0.0523 
+MRR:
+ 0.0364
+0.04
+0.0427
+0.0439
+[Test]:  
+Precision:
+ 0.0145
+0.011
+0.0073
+0.0051 
+Recall:
+ 0.0695
+0.101
+0.1561
+0.2093 
+NDCG:
+ 0.0451
+0.0547
+0.0683
+0.0794 
+MRR:
+0.0502
+0.054
+0.0568
+0.058
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_noisy/', dataset='amazon-book_noisy', gpu='1', log_name='log', mean_type='x0', noise_max=0.0005, noise_min=0.0001, noise_scale=0.005, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=10, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:53:23
+user num: 108822
+item num: 178181
+Traceback (most recent call last):
+  File "./DiffRec/inference.py", line 148, in <module>
+    train_dataset = data_utils.DataDiffusion(torch.FloatTensor(train_data.A))
+RuntimeError: [enforce fail at alloc_cpu.cpp:75] err == 0. DefaultCPUAllocator: can't allocate memory: you tried to allocate 77560051128 bytes. Error code 12 (Cannot allocate memory)
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/yelp_clean/', dataset='yelp_clean', gpu='1', log_name='log', mean_type='x0', noise_max=0.01, noise_min=0.001, noise_scale=0.01, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:53:34
+user num: 54574
+item num: 34395
+data ready.
+models ready.
+[Valid]: 
+Precision:
+ 0.0171
+0.0144
+0.011
+0.0087 
+Recall:
+ 0.0455
+0.0751
+0.1384
+0.2112 
+NDCG:
+ 0.0337
+0.0434
+0.0614
+0.0789 
+MRR:
+ 0.0542
+0.0598
+0.0642
+0.0659
+[Test]:  
+Precision:
+ 0.0132
+0.0112
+0.0083
+0.0064 
+Recall:
+ 0.0581
+0.096
+0.1738
+0.2597 
+NDCG:
+ 0.0363
+0.0478
+0.0669
+0.0845 
+MRR:
+0.0445
+0.0493
+0.0533
+0.055
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/yelp_noisy/', dataset='yelp_noisy', gpu='1', log_name='log', mean_type='x0', noise_max=0.01, noise_min=0.0005, noise_scale=0.001, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:54:16
+user num: 54574
+item num: 77405
+data ready.
+models ready.
+[Valid]: 
+Precision:
+ 0.0139
+0.0121
+0.0095
+0.0076 
+Recall:
+ 0.0392
+0.0659
+0.1235
+0.1907 
+NDCG:
+ 0.0274
+0.0359
+0.0518
+0.0675 
+MRR:
+ 0.0425
+0.0476
+0.0517
+0.0534
+[Test]:  
+Precision:
+ 0.0114
+0.0097
+0.0075
+0.0058 
+Recall:
+ 0.0507
+0.0853
+0.1579
+0.2397 
+NDCG:
+ 0.0309
+0.0414
+0.0592
+0.0759 
+MRR:
+0.037
+0.0415
+0.0453
+0.047
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/ml-1m_clean/', dataset='ml-1m_clean', gpu='1', log_name='log', mean_type='x0', noise_max=0.01, noise_min=0.005, noise_scale=0.005, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=40, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:55:24
+user num: 5949
+item num: 2810
+data ready.
+models ready.
+[Valid]: 
+Precision:
+ 0.0698
+0.0635
+0.0539
+0.046 
+Recall:
+ 0.0643
+0.1147
+0.2219
+0.3433 
+NDCG:
+ 0.085
+0.0986
+0.1345
+0.1777 
+MRR:
+ 0.1657
+0.1778
+0.1847
+0.1863
+[Test]:  
+Precision:
+ 0.058
+0.0521
+0.0427
+0.0341 
+Recall:
+ 0.1058
+0.1787
+0.3234
+0.4664 
+NDCG:
+ 0.0901
+0.1148
+0.1635
+0.2079 
+MRR:
+0.1507
+0.163
+0.1707
+0.1722
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/ml-1m_noisy/', dataset='ml-1m_noisy', gpu='1', log_name='log', mean_type='x0', noise_max=0.01, noise_min=0.001, noise_scale=0.5, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:55:30
+user num: 5949
+item num: 3494
+data ready.
+models ready.
+[Valid]: 
+Precision:
+ 0.03
+0.0322
+0.0337
+0.0333 
+Recall:
+ 0.0371
+0.0722
+0.1658
+0.2861 
+NDCG:
+ 0.0372
+0.0506
+0.0835
+0.1233 
+MRR:
+ 0.0699
+0.0822
+0.0913
+0.0936
+[Test]:  
+Precision:
+ 0.032
+0.0325
+0.0308
+0.0272 
+Recall:
+ 0.0658
+0.1236
+0.2634
+0.4107 
+NDCG:
+ 0.0488
+0.0703
+0.1162
+0.1603 
+MRR:
+0.075
+0.0869
+0.0963
+0.0987

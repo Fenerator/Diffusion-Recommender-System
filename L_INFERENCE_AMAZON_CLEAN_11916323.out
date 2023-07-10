@@ -1,0 +1,50 @@
+/home/lcur2417/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_clean/', dataset='amazon-book_clean', emb_path='./datasets/amazon-book_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=5, noise_max=0.005, noise_min=0.001, noise_scale=0.5, noise_schedule='linear-var', num_workers=4, sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-13 17:03:34
+user num: 108822
+item num: 94949
+data ready.
+Preparing mask for validation & test costs 00: 00: 01
+[Valid]: 
+Precision:
+ 0.0113
+0.0093
+0.0068
+0.0052 
+Recall:
+ 0.0385
+0.0601
+0.1023
+0.1476 
+NDCG:
+ 0.0261
+0.0333
+0.0449
+0.0555 
+MRR:
+ 0.0352
+0.0388
+0.0418
+0.0431
+[Test]:  
+Precision:
+ 0.0132
+0.0102
+0.007
+0.0051 
+Recall:
+ 0.0694
+0.1028
+0.1635
+0.2265 
+NDCG:
+ 0.044
+0.054
+0.0688
+0.0816 
+MRR:
+0.0468
+0.0506
+0.0537
+0.0551

@@ -1,0 +1,72 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_titanrtx_shared_course
+#SBATCH --gres=gpu:2
+#SBATCH --job-name=L
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=3
+#SBATCH --time=04:00:00
+#SBATCH --mem=64000M
+#SBATCH --output=L_TRAIN_YELP_CLEAN_CAT_2_%A.out
+
+
+#module purge
+module load 2021
+module load Anaconda3/2021.05
+
+
+source activate rs
+
+# Inference only
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --sampling_steps 0 --steps 100 
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --sampling_steps 0 --steps 100 --n_cate 5
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --sampling_steps 0 --steps 100 
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --sampling_steps 0 --steps 100 
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --sampling_steps 0 --steps 100 --num_workers 0
+# python ./L-DiffRec/inference.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --sampling_steps 0 --steps 100 
+
+# train
+NAME='Reproduction'
+SEED=1
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+
+SEED=2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+
+SEED=3
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+
+SEED=4
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+
+SEED=5
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=1 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+python ./L-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=1 --num_workers 0 --run_name=$NAME --seed $SEED --n_cate 2
+
+
+conda deactivate
+

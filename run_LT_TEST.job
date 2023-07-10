@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_titanrtx_shared_course
+#SBATCH --gres=gpu:2
+#SBATCH --job-name=T
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=3
+#SBATCH --time=24:00:00
+#SBATCH --mem=125000M
+#SBATCH --output=LT_train_TEST_%A.out
+
+module purge
+module load 2021
+module load Anaconda3/2021.05
+
+
+source activate rs
+
+# Inference
+# python ./T-DiffRec/inference.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=1 # DONE 
+# python ./T-DiffRec/inference.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=1 
+
+
+# Training
+python ./LT-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=1 --run_name=TEST_1
+
+
+conda deactivate

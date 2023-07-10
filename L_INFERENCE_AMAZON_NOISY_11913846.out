@@ -1,0 +1,48 @@
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_noisy/', dataset='amazon-book_noisy', emb_path='./datasets/amazon-book_noisy/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.005, noise_min=0.001, noise_scale=0.5, noise_schedule='linear-var', num_workers=0, sampling_noise=False, sampling_steps=0, steps=10, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-12 14:29:36
+user num: 108822
+item num: 178181
+data ready.
+Preparing mask for validation & test costs 00: 00: 01
+[Valid]: 
+Precision:
+ 0.0077
+0.0067
+0.0052
+0.0041 
+Recall:
+ 0.0307
+0.0501
+0.0883
+0.1309 
+NDCG:
+ 0.0186
+0.0247
+0.0346
+0.0439 
+MRR:
+ 0.0228
+0.026
+0.0286
+0.0298
+[Test]:  
+Precision:
+ 0.011
+0.0087
+0.0061
+0.0046 
+Recall:
+ 0.0583
+0.0875
+0.1439
+0.2035 
+NDCG:
+ 0.0345
+0.0433
+0.057
+0.069 
+MRR:
+0.0354
+0.0389
+0.0419
+0.0431

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_titanrtx_shared_course
+#SBATCH --gres=gpu:1
+#SBATCH --job-name=T
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=3
+#SBATCH --time=48:00:00
+#SBATCH --mem=125000M
+#SBATCH --output=T_Patience200_FINAL_Amzon_%A.out
+
+module purge
+module load 2021
+module load Anaconda3/2021.05
+
+
+source activate rs
+
+NAME='Patience_200'
+
+# small datasets
+SEED=1
+PATIENCE=200
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE
+
+python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE --num_workers 0
+python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_clean --cuda --gpu=0 --run_name=$NAME --seed $SEED --patience $PATIENCE --num_workers 0
+
+
+conda deactivate

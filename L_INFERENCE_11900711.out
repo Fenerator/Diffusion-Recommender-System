@@ -1,0 +1,258 @@
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/yelp_noisy/', dataset='yelp_noisy', emb_path='./datasets/yelp_noisy/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:58:30
+user num: 54574
+item num: 77405
+data ready.
+Preparing mask for validation & test costs 00: 00: 00
+[Valid]: 
+Precision:
+ 0.0137
+0.012
+0.0096
+0.0078 
+Recall:
+ 0.0397
+0.0675
+0.1277
+0.1989 
+NDCG:
+ 0.0277
+0.0366
+0.0531
+0.0697 
+MRR:
+ 0.0423
+0.0474
+0.0517
+0.0534
+[Test]:  
+Precision:
+ 0.0112
+0.0098
+0.0075
+0.0059 
+Recall:
+ 0.0521
+0.0876
+0.163
+0.249 
+NDCG:
+ 0.0311
+0.0419
+0.0603
+0.0778 
+MRR:
+0.0364
+0.041
+0.0449
+0.0466
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_clean/', dataset='amazon-book_clean', emb_path='./datasets/amazon-book_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.005, noise_min=0.001, noise_scale=0.5, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 22:59:22
+user num: 108822
+item num: 94949
+data ready.
+Preparing mask for validation & test costs 00: 00: 01
+[Valid]: 
+Precision:
+ 0.0113
+0.0093
+0.0068
+0.0052 
+Recall:
+ 0.0385
+0.0601
+0.1023
+0.1476 
+NDCG:
+ 0.0261
+0.0333
+0.0449
+0.0555 
+MRR:
+ 0.0352
+0.0388
+0.0418
+0.0431
+[Test]:  
+Precision:
+ 0.0132
+0.0102
+0.007
+0.0051 
+Recall:
+ 0.0694
+0.1028
+0.1635
+0.2265 
+NDCG:
+ 0.044
+0.054
+0.0688
+0.0816 
+MRR:
+0.0468
+0.0506
+0.0537
+0.0551
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/yelp_clean/', dataset='yelp_clean', emb_path='./datasets/yelp_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 23:01:29
+user num: 54574
+item num: 34395
+data ready.
+Preparing mask for validation & test costs 00: 00: 00
+[Valid]: 
+Precision:
+ 0.0164
+0.0141
+0.011
+0.0087 
+Recall:
+ 0.0457
+0.0769
+0.144
+0.2223 
+NDCG:
+ 0.0335
+0.0439
+0.0628
+0.0814 
+MRR:
+ 0.0525
+0.0583
+0.0629
+0.0648
+[Test]:  
+Precision:
+ 0.0128
+0.0109
+0.0083
+0.0064 
+Recall:
+ 0.0585
+0.097
+0.1799
+0.2701 
+NDCG:
+ 0.0353
+0.0469
+0.0672
+0.0856 
+MRR:
+0.0411
+0.046
+0.0502
+0.0519
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/ml-1m_clean/', dataset='ml-1m_clean', emb_path='./datasets/ml-1m_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.02, noise_min=0.005, noise_scale=0.005, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=40, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 23:02:04
+user num: 5949
+item num: 2810
+data ready.
+Preparing mask for validation & test costs 00: 00: 00
+[Valid]: 
+Precision:
+ 0.0656
+0.0615
+0.0539
+0.0462 
+Recall:
+ 0.0644
+0.1164
+0.2318
+0.3623 
+NDCG:
+ 0.0809
+0.0963
+0.1354
+0.181 
+MRR:
+ 0.1548
+0.1675
+0.1747
+0.1762
+[Test]:  
+Precision:
+ 0.0557
+0.0506
+0.0422
+0.0342 
+Recall:
+ 0.106
+0.1809
+0.3367
+0.4899 
+NDCG:
+ 0.0868
+0.1122
+0.1635
+0.2101 
+MRR:
+0.1394
+0.152
+0.1595
+0.1612
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_noisy/', dataset='amazon-book_noisy', emb_path='./datasets/amazon-book_noisy/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.005, noise_min=0.001, noise_scale=0.5, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=10, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 23:02:11
+user num: 108822
+item num: 178181
+Traceback (most recent call last):
+  File "./L-DiffRec/inference.py", line 141, in <module>
+    train_dataset = data_utils.DataDiffusion(torch.FloatTensor(train_data.A))
+RuntimeError: [enforce fail at alloc_cpu.cpp:75] err == 0. DefaultCPUAllocator: can't allocate memory: you tried to allocate 77560051128 bytes. Error code 12 (Cannot allocate memory)
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/ml-1m_noisy/', dataset='ml-1m_noisy', emb_path='./datasets/ml-1m_noisy/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.02, noise_min=0.005, noise_scale=0.005, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=100, topN='[10, 20, 50, 100]', tst_w_val=False)
+Starting time:  2023-06-09 23:02:23
+user num: 5949
+item num: 3494
+data ready.
+Preparing mask for validation & test costs 00: 00: 00
+[Valid]: 
+Precision:
+ 0.0304
+0.0312
+0.0319
+0.0318 
+Recall:
+ 0.0389
+0.0741
+0.168
+0.2873 
+NDCG:
+ 0.0396
+0.0521
+0.0835
+0.1229 
+MRR:
+ 0.0775
+0.0889
+0.0976
+0.1
+[Test]:  
+Precision:
+ 0.0305
+0.0306
+0.029
+0.0261 
+Recall:
+ 0.0665
+0.1272
+0.2608
+0.4131 
+NDCG:
+ 0.0493
+0.071
+0.1148
+0.1596 
+MRR:
+0.0764
+0.0879
+0.0967
+0.0992

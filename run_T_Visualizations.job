@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_titanrtx_shared_course
+#SBATCH --gres=gpu:1
+#SBATCH --job-name=T-vis
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
+#SBATCH --time=24:00:00
+#SBATCH --mem=124000M
+#SBATCH --output=T_with-learnable_weight_VISUALIZATION_REST_Part_2_%A.out
+
+module purge
+module load 2021
+module load Anaconda3/2021.05
+
+
+source activate rs
+
+# Training
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=0 --run_name=WEIGHT_TEST --mean_type=x0_learnable --visualize_weights # DONE worked with 10 workers
+
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_clean --cuda --gpu=0 --run_name=Visualization --mean_type=x0_learnable --visualize_weights # DONE
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=yelp_noisy --cuda --gpu=0 --run_name=Visualization --mean_type=x0_learnable --visualize_weights # DONE, vis is seperate
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_noisy --cuda --gpu=0 --run_name=Visualization --mean_type=x0_learnable --visualize_weights # DONE, vis is TODO
+# python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=ml-1m_clean --cuda --gpu=0 --run_name=Visualization --mean_type=x0_learnable  # Done
+
+python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=0 --run_name=Visualization --num_workers 0 --mean_type=x0_learnable # TODO
+
+
+# Backup
+# python utils/visualize_weights.py --dataset=ml-1m_clean --run_name=Visualization --model_type=T-DiffRec --seed 1 --workers 10 # DONE
+
+python ./T-DiffRec/main.py --data_path ./datasets/ --dataset=amazon-book_noisy --cuda --gpu=0 --run_name=Visualization --num_workers 0 --mean_type=x0_learnable # TODO
+
+# python utils/visualize_weights.py --dataset=amazon-book_noisy --run_name=Visualization --model_type=T-DiffRec --seed 1 --workers 10
+
+conda deactivate

@@ -1,0 +1,100 @@
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/yelp_clean/', dataset='yelp_clean', emb_path='./datasets/yelp_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.01, noise_min=0.005, noise_scale=0.01, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False, w_max=1.0, w_min=0.5)
+Starting time:  2023-06-09 22:55:41
+user num: 54574
+item num: 34395
+data ready.
+Preparing mask for validation & test costs 00: 00: 00
+[Valid]: 
+Precision:
+ 0.017
+0.0145
+0.0112
+0.0089 
+Recall:
+ 0.0464
+0.0775
+0.1449
+0.2239 
+NDCG:
+ 0.0341
+0.0445
+0.0635
+0.0823 
+MRR:
+ 0.0542
+0.0599
+0.0646
+0.0664
+[Test]:  
+Precision:
+ 0.0134
+0.0111
+0.0085
+0.0066 
+Recall:
+ 0.0604
+0.0982
+0.181
+0.2745 
+NDCG:
+ 0.0369
+0.0484
+0.0687
+0.0877 
+MRR:
+0.0439
+0.0487
+0.0529
+0.0547
+/home/lcur2470/.conda/envs/rs/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(batch_size=400, cuda=True, data_path='./datasets/amazon-book_clean/', dataset='amazon-book_clean', emb_path='./datasets/amazon-book_clean/', gpu='1', log_name='log', mean_type='x0', n_cate=2, noise_max=0.005, noise_min=0.001, noise_scale=0.7, noise_schedule='linear-var', sampling_noise=False, sampling_steps=0, steps=5, topN='[10, 20, 50, 100]', tst_w_val=False, w_max=1.0, w_min=0.1)
+Starting time:  2023-06-09 22:56:20
+user num: 108822
+item num: 94949
+data ready.
+Preparing mask for validation & test costs 00: 00: 01
+[Valid]: 
+Precision:
+ 0.0133
+0.0106
+0.0076
+0.0057 
+Recall:
+ 0.0436
+0.0662
+0.1098
+0.1569 
+NDCG:
+ 0.0306
+0.0381
+0.0502
+0.0613 
+MRR:
+ 0.0426
+0.0464
+0.0495
+0.0509
+[Test]:  
+Precision:
+ 0.0169
+0.0126
+0.0083
+0.0059 
+Recall:
+ 0.0838
+0.1188
+0.182
+0.245 
+NDCG:
+ 0.056
+0.0665
+0.0822
+0.0952 
+MRR:
+0.063
+0.0672
+0.0703
+0.0716

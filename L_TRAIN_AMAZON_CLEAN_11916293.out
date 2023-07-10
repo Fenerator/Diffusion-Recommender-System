@@ -1,0 +1,14 @@
+/home/lcur2417/.local/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+args: Namespace(act_func='tanh', anneal_cap=0.005, anneal_steps=500, batch_size=400, cuda=True, data_path='./datasets/', dataset='amazon-book_clean', emb_path='./datasets/', emb_size=10, epochs=1000, gpu='1', in_dims='[300]', lamda=0.03, log_name='log', lr1=0.0001, lr2=0.0001, mean_type='x0', mlp_act_func='tanh', mlp_dims='[300]', n_cate=1, noise_max=0.02, noise_min=0.0001, noise_scale=0.1, noise_schedule='linear-var', norm=False, num_workers=4, optimizer1='AdamW', optimizer2='AdamW', out_dims='[]', reparam=True, reweight=True, round=1, sampling_noise=False, sampling_steps=0, save_path='./saved_models/', steps=100, time_type='cat', topN='[10, 20, 50, 100]', tst_w_val=False, vae_anneal_cap=0.3, vae_anneal_steps=200, wd1=0.0, wd2=0.0)
+Starting time:  2023-06-13 16:51:38
+user num: 108822
+item num: 94949
+data ready.
+emb_path: ./datasets/amazon-book_clean/item_emb.npy
+Traceback (most recent call last):
+  File "./L-DiffRec/main.py", line 202, in <module>
+    item_emb = torch.from_numpy(np.load(emb_path, allow_pickle=True))
+  File "/sw/arch/Debian10/EB_production/2021/software/Anaconda3/2021.05/lib/python3.8/site-packages/numpy/lib/npyio.py", line 417, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: './datasets/amazon-book_clean/item_emb.npy'
