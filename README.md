@@ -1,3 +1,5 @@
+
+
 # Diffusion Recommender Model - Reproduction and Extension
 This is a reproduction and extension of the paper at SIGIR 2023:
 > [Diffusion Recommender Model](https://arxiv.org/abs/2304.04971)
@@ -19,7 +21,7 @@ We provide our working conda environment in the `environment.yml` file and add i
 1. Clone this repo if not already done so.
 2. set up environment using conda and the provided [environment.yml](environment.yml) file:
     ```bash
-    conda create --name rs --file environment.yml
+    conda env create --name rs --file environment.yml
     ```
 3. activate the environment:
     ```bash
@@ -123,5 +125,3 @@ python ./DiffRec/inference.py --data_path ./datasets/ --dataset=yelp_clean --cud
 ```
 
 More examples of inference commands can be found in the linked `.job` files too.
-
-
